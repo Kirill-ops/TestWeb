@@ -1,0 +1,50 @@
+﻿@model TestWeb.Models.Cargo
+
+@{
+    ViewData["Title"] = "Доставка";
+}
+
+ @* BC830187-A186-485A-AC80-2354B6D9EDF5 *@
+
+
+ 
+<div style="margin:0 auto;">
+
+    <h2 style="background-color:orange; width:auto;">ТК Деловые линии</h2>
+
+
+    <br />
+
+    <h3>Расчёт заказа</h3>
+
+    <label>Объем груза 1 куб. м., вес 200 кг., 1 место</label>
+
+    <br />
+    <br />
+
+    <div>
+        <input type="text" id="CityIn" value="Чита" />
+    </div>
+
+    <br />
+
+    <div>
+        <input type="text" id="CityOut" list="listDerivial" oninput="getCitiesDerivial(this)" />
+        <datalist id="listDerivial">
+        </datalist>
+    </div>
+
+    <br />
+
+    <div id="ts-example">
+        <button type="button" class="btn btn-primary btn-md" onclick="calculate()">
+            Рассчитать
+        </button>
+    </div>
+
+    <br />
+
+    <p id="result"></p>
+
+</div>
+
